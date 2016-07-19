@@ -1,3 +1,8 @@
+# given a number print all perfect fractions
+# starting with 0/1 and ending with 1/1
+# example input : 4
+# output : [0 / 1] [1 / 4] [1 / 3] [1 / 2] [2 / 3] [3 / 4] [1 / 1]
+
 def swap_numbers(a,b):
     return (b,a)
 
@@ -31,6 +36,6 @@ def main():
     fraction_values = map(calculate_value, fractions)
     sort(fraction_values, 0, len(fractions)-1, fractions)
     for elem in fractions:
-        print elem[0], '/', elem[1]
+        print '[', elem[0], '/', elem[1], ']',
 
 main()

@@ -2,6 +2,7 @@
 # starting with 0/1 and ending with 1/1
 # example input : 4
 # output : [0 / 1] [1 / 4] [1 / 3] [1 / 2] [2 / 3] [3 / 4] [1 / 1]
+# catamaran ventures
 
 def swap_numbers(a,b):
     return (b,a)

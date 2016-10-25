@@ -9,3 +9,5 @@ def f(delim:Int,arr:List[Int]):List[Int] = arr.filter(_ < delim)
 // https://www.hackerrank.com/challenges/fp-filter-positions-in-a-list
 def f(arr:List[Int]):List[Int] = arr.zipWithIndex.filter(_._2 % 2 != 0).map(_._1)
 
+List.fill(io.Source.stdin.getLines().take(1).toList(0).toInt)(io.Source.stdin.getLines().take(1).toList(0))
+

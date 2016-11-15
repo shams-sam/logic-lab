@@ -1,0 +1,202 @@
+#!/usr/bin/env bash
+
+get_arg () {
+    if [ -n "$2" ]; then
+        arg=$2
+    else
+        arg=$1
+    fi
+    echo $arg
+}
+
+get_timestamp () {
+    echo "$(date +%Y%m%d%H%M%S)"
+}
+
+get_memory_usage () {
+    echo "$(free -m | awk 'NR==2{printf "%.2f\n", $3*100/$2 }')"
+}
+
+get_disk_usage() {
+    echo "$(df -h | awk '$NF=="/"{printf "%s\n", $5}' | tr -d '%')"
+}
+
+close_index () {
+    echo "*********************************"
+    echo "********* closing index *********"
+    echo "*********************************"
+    curl -XPOST "$ES_HOST_PROTOCOL"://"$ES_HOST":"$ES_PORT"/"$1"/_close?pretty
+    check_index_status "$1"
+}
+
+open_index () {
+    echo "*********************************"
+    echo "********* opening index *********"
+    echo "*********************************"
+    curl -XPOST "$ES_HOST_PROTOCOL"://"$ES_HOST":"$ES_PORT"/"$1"/_open?pretty
+    check_index_status "$1"
+}
+
+check_index_status () {
+    echo "******************************************"
+    echo "********* cluster index statuses *********"
+    echo "******************************************"
+    if [ -n "$1" ]; then 
+        curl -XGET "$ES_HOST_PROTOCOL"://"$ES_HOST":"$ES_PORT"/_cat/indices/"$1"
+    else
+        curl -XGET "$ES_HOST_PROTOCOL"://"$ES_HOST":"$ES_PORT"/_cat/indices
+    fi
+}
+
+_repo_exists () {
+    repo_name=$(get_arg "$ES_BACKUP_REPOSITORY_NAME" "$1")
+    echo $(curl --write-out "%{http_code}\n" --silent --output /dev/null -XGET "$ES_HOST_PROTOCOL"://"$ES_HOST":"$ES_PORT"/_snapshot/"$repo_name")
+}
+
+get_repo () {
+    repo_name=$(get_arg "$ES_BACKUP_REPOSITORY_NAME" "$1")
+    exists=$(_repo_exists "$repo_name")
+    if [ "$exists" != "200" ]; then
+        echo "*************************************"
+        echo "********* creating new repo *********"
+        echo "*************************************"
+        curl -XPUT "$ES_HOST_PROTOCOL"://"$ES_HOST":"$ES_PORT"/_snapshot/"$repo_name"?pretty -d '{
+            "type": "s3",
+            "settings": {
+                "access_key": "'"$AWS_ACCESS_KEY"'",
+                "secret_key": "'"$AWS_SECRET_KEY"'",
+                "bucket": "'"$AWS_BUCKET"'",
+                "region": "'"$AWS_REGION"'",
+                "base_path": "'"$S3_BASE_PATH"'",
+                "max_retries": '"$S3_MAX_RETRIES"'
+            }
+        }'
+    else
+        echo "***************************************"
+        echo "********* repo already exists *********"
+        echo "***************************************"
+    fi
+    verify_repo "$repo_name"
+}
+
+verify_repo () {
+    echo "**********************************"
+    echo "********* verifying repo *********"
+    echo "**********************************"
+    if [ -n "$1" ]; then
+        curl -XGET "$ES_HOST_PROTOCOL"://"$ES_HOST":"$ES_PORT"/_snapshot/"$1"?pretty
+    else
+        curl -XGET "$ES_HOST_PROTOCOL"://"$ES_HOST":"$ES_PORT"/_snapshot/"$ES_BACKUP_REPOSITORY_NAME"?pretty
+    fi
+}
+
+delete_repo () {
+    repo_name=$(get_arg "$ES_BACKUP_REPOSITORY_NAME" "$1")
+    exists=$(_repo_exists "$repo_name")
+    if [ "$exists" == "200" ]; then
+        echo "*********************************"
+        echo "********* deleting repo *********"
+        echo "*********************************"
+        curl -XDELETE "$ES_HOST_PROTOCOL"://"$ES_HOST":"$ES_PORT"/_snapshot/"$repo_name"?pretty
+    else
+        echo "********************************************"
+        echo "********* repo not found to delete *********"
+        echo "********************************************"
+    fi
+}
+
+get_snapshot () {
+    repo_name=$(get_arg "$ES_BACKUP_REPOSITORY_NAME" "$2")
+    exists=$(_repo_exists "$repo_name")
+    snapshot_name=$(get_arg "_all" "$1")
+    if [ "$exists" == "200" ]; then
+        echo "*********************************"
+        echo "********* snapshot list *********"
+        echo "*********************************"
+        curl -XGET "$ES_HOST_PROTOCOL"://"$ES_HOST":"$ES_PORT"/_snapshot/"$repo_name"/"$snapshot_name"?pretty
+    else
+        echo "***********************************************"
+        echo "********* repo not found for snapshot *********"
+        echo "***********************************************"
+    fi
+}
+
+get_snapshot_status () {
+    repo_name=$(get_arg "$ES_BACKUP_REPOSITORY_NAME" "$2")
+    exists=$(_repo_exists "$repo_name")
+    if [ "$exists" == "200" ]; then
+        echo "***********************************"
+        echo "********* snapshot status *********"
+        echo "***********************************"
+        curl -XGET "$ES_HOST_PROTOCOL"://"$ES_HOST":"$ES_PORT"/_snapshot/"$repo_name"/"$1"/_status?pretty
+    else
+        echo "***********************************************"
+        echo "********* repo not found for snapshot *********"
+        echo "***********************************************"
+    fi
+}
+
+create_snapshot () {
+    repo_name=$(get_arg "$ES_BACKUP_REPOSITORY_NAME" "$2")
+    exists=$(_repo_exists "$repo_name")
+    snapshot_name=$1
+    if [ "$exists" == "200" ]; then
+        echo "*************************************"
+        echo "********* creating snapshot *********"
+        echo "*************************************"
+        curl -XPUT "$ES_HOST_PROTOCOL"://"$ES_HOST":"$ES_PORT"/_snapshot/"$repo_name"/"$snapshot_name"?pretty -d '{
+            "indices": "'"$BACKUP_INDICES"'",
+            "ignore_unavailable": "true",
+            "include_global_state": "false"
+        }'
+    else
+        echo "***********************************************"
+        echo "********* repo not found for snapshot *********"
+        echo "***********************************************"
+    fi
+}
+
+delete_snapshot () {
+    repo_name=$(get_arg "$ES_BACKUP_REPOSITORY_NAME" "$2")
+    exists=$(_repo_exists "$repo_name")
+    if [ "$exists" == "200" ]; then
+        echo "*************************************"
+        echo "********* deleting snapshot *********"
+        echo "*************************************"
+        curl -XDELETE "$ES_HOST_PROTOCOL"://"$ES_HOST":"$ES_PORT"/_snapshot/"$repo_name"/"$1"?pretty
+    else
+        echo "********************************************************"
+        echo "********* repo not found for deleting snapshot *********"
+        echo "********************************************************"
+    fi
+}
+
+restore_snapshot () {
+    repo_name=$(get_arg "$ES_BACKUP_REPOSITORY_NAME" "$2")
+    exists=$(_repo_exists "$repo_name")
+    if [ "$exists" == "200" ]; then
+        echo "**************************************"
+        echo "********* restoring snapshot *********"
+        echo "**************************************"
+        curl -XPOST "$ES_HOST_PROTOCOL"://"$ES_HOST":"$ES_PORT"/_snapshot/"$repo_name"/"$1"/_restore?pretty -d '{
+            "indices": "'"$BACKUP_INDICES"'",
+            "ignore_unavailable": "true",
+            "include_global_state": "false"
+        }'
+    else
+        echo "********************************************************"
+        echo "********* repo not found for deleting snapshot *********"
+        echo "********************************************************"
+    fi
+}
+
+get_recovery_status () {
+    echo "***********************************"
+    echo "********* recovery status *********"
+    echo "***********************************"
+    if [ -n "$1" ]; then
+        curl "$ES_HOST_PROTOCOL"://"$ES_HOST":"$ES_PORT"/"$1"/_recovery?pretty
+    else
+        curl "$ES_HOST_PROTOCOL"://"$ES_HOST":"$ES_PORT"/_recovery?pretty
+    fi
+}

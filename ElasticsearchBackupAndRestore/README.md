@@ -17,9 +17,11 @@ else:
 ````
 
 ## One click backup and restore
-### source config.sh
-### backup  : . elastic_commnd &&  es_backup
-### restore : . elastic_commnd &&  es_restore
+````
+source config.sh
+. elastic_commnd &&  es_backup
+. elastic_commnd &&  es_restore
+````
 
 ## Functions
 ### General Purpose

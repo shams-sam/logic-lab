@@ -1,7 +1,7 @@
 ## Elasticsearch Backup and Restore
 
-- [Shell Script](https://github.com/shams-sam/logic-lab/blob/master/ElasticsearchBackupAndRestore/elastic)
-- [Environment Variable Config](https://github.com/shams-sam/logic-lab/blob/master/ElasticsearchBackupAndRestore/env.sh)
+- [Shell Script](https://github.com/shams-sam/logic-lab/blob/master/ElasticsearchBackupAndRestore/elastic_command)
+- [Environment Variable Config](https://github.com/shams-sam/logic-lab/blob/master/ElasticsearchBackupAndRestore/config.sh)
 
 ## Setup
 ````
@@ -15,6 +15,11 @@ else:
 2. restart the elasticsearch server
 3. curl localhost:9200/_nodes/plugin should show cloud-aws
 ````
+
+## One click backup and restore
+### source config.sh
+### backup  : . elastic_commnd &&  es_backup
+### restore : . elastic_commnd &&  es_restore
 
 ## Functions
 ### General Purpose

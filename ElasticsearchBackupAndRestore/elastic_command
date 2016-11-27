@@ -1,0 +1,277 @@
+#!/usr/bin/env bash
+
+get_arg () {
+    if [ -n "$2" ]; then
+        arg=$2
+    else
+        arg=$1
+    fi
+    echo $arg
+}
+
+get_timestamp () {
+    echo "$(date +%Y%m%d%H%M%S)"
+}
+
+get_memory_usage () {
+    echo "$(free -m | awk 'NR==2{printf "%.2f\n", $3*100/$2 }')"
+}
+
+get_disk_usage () {
+    echo "$(df -h | awk '$NF=="/"{printf "%s\n", $5}' | tr -d '%')"
+}
+
+get_repo_name () {
+    timestamp=$(get_timestamp)
+    echo 'repository-'"$timestamp"
+}
+
+get_snapshot_name () {
+    timestamp=$(get_timestamp)
+    echo 'snapshot-'"$timestamp"
+}
+
+close_index () {
+    if [ -z "$1" ]; then
+        echo "error : index name is a mandatory argument"
+        return
+    fi
+    echo "********* closing index : '"$1"' *********"
+    curl -s -XPOST "$ES_HOST_PROTOCOL"://"$ES_HOST":"$ES_PORT"/"$1"/_close?pretty
+    check_index_status "$1"
+}
+
+open_index () {
+    if [ -z "$1" ]; then
+        echo "error : index name is a mandatory argument"
+        return
+    fi
+    echo "********* opening index : '"$1"' *********"
+    curl -s -XPOST "$ES_HOST_PROTOCOL"://"$ES_HOST":"$ES_PORT"/"$1"/_open?pretty
+    check_index_status "$1"
+}
+
+check_index_status () {
+    echo "********* cluster index statuses *********"
+    if [ -n "$1" ]; then
+        curl -XGET "$ES_HOST_PROTOCOL"://"$ES_HOST":"$ES_PORT"/_cat/indices/"$1"
+    else
+        curl -XGET "$ES_HOST_PROTOCOL"://"$ES_HOST":"$ES_PORT"/_cat/indices
+    fi
+}
+
+get_cluster_health() {
+    res=$(curl -s -XGET "$ES_HOST_PROTOCOL"://"$ES_HOST":"$ES_PORT"/_cluster/health?pretty | awk 'NR==3 {print $3}' | tr -d ',"')
+    echo $res
+}
+
+_repo_exists () {
+    repo_name=$(get_arg "$ES_BACKUP_REPOSITORY_NAME" "$1")
+    echo $(curl --write-out "%{http_code}\n" -s -o /dev/null -XGET "$ES_HOST_PROTOCOL"://"$ES_HOST":"$ES_PORT"/_snapshot/"$repo_name")
+}
+
+get_repo () {
+    repo_name=$(get_arg "$ES_BACKUP_REPOSITORY_NAME" "$1")
+    exists=$(_repo_exists "$repo_name")
+    if [ "$exists" != "200" ]; then
+        res=$(curl -s -XPUT "$ES_HOST_PROTOCOL"://"$ES_HOST":"$ES_PORT"/_snapshot/"$repo_name"?pretty -d '{
+            "type": "s3",
+            "settings": {
+                "access_key": "'"$AWS_ACCESS_KEY"'",
+                "secret_key": "'"$AWS_SECRET_KEY"'",
+                "bucket": "'"$AWS_BUCKET"'",
+                "region": "'"$AWS_REGION"'",
+                "base_path": "'"$S3_BASE_PATH"'",
+                "max_retries": '"$S3_MAX_RETRIES"'
+            }
+        }')
+    fi
+    verified_name=$(verify_repo "$repo_name")
+    if [ "$verified_name" != 'error' ]; then
+        echo $verified_name
+    else
+        echo error
+    fi
+}
+
+list_repo() {
+    curl -XGET "$ES_HOST_PROTOCOL"://"$ES_HOST":"$ES_PORT"/_snapshot?pretty
+}
+
+verify_repo () {
+    if [ -n "$1" ]; then
+        res=$(curl -s -XGET "$ES_HOST_PROTOCOL"://"$ES_HOST":"$ES_PORT"/_snapshot/"$1"?pretty | awk 'NR==2 {print $1}' | tr -d '"')
+    else
+        res=$(curl -s -XGET "$ES_HOST_PROTOCOL"://"$ES_HOST":"$ES_PORT"/_snapshot/"$ES_BACKUP_REPOSITORY_NAME"?pretty | awk 'NR==2 {print $1}' | tr -d '"')
+    fi
+    echo $res
+}
+
+delete_repo () {
+    repo_name=$(get_arg "$ES_BACKUP_REPOSITORY_NAME" "$1")
+    exists=$(_repo_exists "$repo_name")
+    if [ "$exists" == "200" ]; then
+        echo "********* deleting repo : '"$repo_name"' *********"
+        curl -XDELETE "$ES_HOST_PROTOCOL"://"$ES_HOST":"$ES_PORT"/_snapshot/"$repo_name"?pretty
+    else
+        echo "********* repo : '"$repo_name"' not found*********"
+    fi
+}
+
+list_snapshot () {
+    repo_name=$(get_arg "$ES_BACKUP_REPOSITORY_NAME" "$2")
+    exists=$(_repo_exists "$repo_name")
+    snapshot_name=$(get_arg "_all" "$1")
+    if [ "$exists" == "200" ]; then
+        echo "********* snapshot list for repo : '"$repo_name"' *********"
+        curl -XGET "$ES_HOST_PROTOCOL"://"$ES_HOST":"$ES_PORT"/_snapshot/"$repo_name"/"$snapshot_name"?pretty
+    else
+        echo "********* repo : '"$repo_name"' not found*********"
+    fi
+}
+
+list_snapshot_name () {
+    repo_name=$(get_arg "$ES_BACKUP_REPOSITORY_NAME" "$2")
+    exists=$(_repo_exists "$repo_name")
+    snapshot_name=$(get_arg "_all" "$1")
+    if [ "$exists" == "200" ]; then
+        res=$(curl -s -XGET "$ES_HOST_PROTOCOL"://"$ES_HOST":"$ES_PORT"/_snapshot/"$repo_name"/"$snapshot_name"?pretty | grep snapshot | sed '1d' | while read line; do
+            echo $line | awk '{print $3}' | tr -d ',"'
+        done)
+    fi
+    echo $res
+}
+
+last_snapshot_name () {
+    repo_name=$(get_arg "$ES_BACKUP_REPOSITORY_NAME" "$2")
+    exists=$(_repo_exists "$repo_name")
+    snapshot_name=$(get_arg "_all" "$1")
+    if [ "$exists" == "200" ]; then
+        res=$(curl -s -XGET "$ES_HOST_PROTOCOL"://"$ES_HOST":"$ES_PORT"/_snapshot/"$repo_name"/"$snapshot_name"?pretty | grep snapshot | sed '1d' | awk '{print $3}' | tr -d ',"' | tail -n 1)
+    fi
+    echo $res
+}
+
+delete_all_snapshots () {
+    snapshots=$(list_snapshot_name)
+    for snapshot in $snapshots
+    do
+        delete_snapshot $snapshot
+    done
+}
+
+snapshot_status () {
+    repo_name=$(get_arg "$ES_BACKUP_REPOSITORY_NAME" "$2")
+    exists=$(_repo_exists "$repo_name")
+    if [ -z "$1" ]; then
+        echo "error : snapshot name is a mandatory_argument"
+        return
+    fi
+    if [ "$exists" == "200" ]; then
+        curl -s -XGET "$ES_HOST_PROTOCOL"://"$ES_HOST":"$ES_PORT"/_snapshot/"$repo_name"/"$1"/_status?pretty | grep state | awk '{print $3}' | tr -d ',"'
+    fi
+}
+
+create_snapshot () {
+    repo_name=$(get_arg "$ES_BACKUP_REPOSITORY_NAME" "$2")
+    exists=$(_repo_exists "$repo_name")
+    snapshot_name=$1
+    if [ -z "$1" ]; then
+        echo "error : snapshot name is a mandatory argument"
+        return
+    fi
+    if [ "$exists" == "200" ]; then
+        echo '********* creating snapshot : '$1' in repo : '$repo_name' *********'
+        curl -s -XPUT "$ES_HOST_PROTOCOL"://"$ES_HOST":"$ES_PORT"/_snapshot/"$repo_name"/"$snapshot_name"?pretty -d '{
+            "indices": "'"$BACKUP_INDICES"'",
+            "ignore_unavailable": "true",
+            "include_global_state": "false"
+        }'
+    else
+        echo "********* repo : '"$repo_name"' not found *********"
+    fi
+}
+
+delete_snapshot () {
+    repo_name=$(get_arg "$ES_BACKUP_REPOSITORY_NAME" "$2")
+    exists=$(_repo_exists "$repo_name")
+    if [ -z "$1" ]; then
+        echo "error : snapshot name is a mandatory argument"
+        return
+    fi
+    if [ "$exists" == "200" ]; then
+        echo '********* deleting snapshot : '$1' *********'
+        res=$(curl -s -XDELETE "$ES_HOST_PROTOCOL"://"$ES_HOST":"$ES_PORT"/_snapshot/"$repo_name"/"$1"?pretty)
+    else
+        echo "********* repo : '"$repo_name"' not found*********"
+    fi
+}
+
+restore_snapshot () {
+    repo_name=$(get_arg "$ES_BACKUP_REPOSITORY_NAME" "$2")
+    exists=$(_repo_exists "$repo_name")
+    if [ -z "$1" ]; then
+        echo "error : snapshot name is a mandatory argument"
+        return
+    fi
+    if [ "$exists" == "200" ]; then
+        echo "********* restoring snapshot : '"$1"' *********"
+        curl -XPOST "$ES_HOST_PROTOCOL"://"$ES_HOST":"$ES_PORT"/_snapshot/"$repo_name"/"$1"/_restore?pretty -d '{
+            "indices": "'"$BACKUP_INDICES"'",
+            "ignore_unavailable": "true",
+            "include_global_state": "false"
+        }'
+    else
+        echo "********* repo : '"$repo_name"' not found*********"
+    fi
+}
+
+recovery_status () {
+    echo "********* recovery status *********"
+    if [ -n "$1" ]; then
+        curl "$ES_HOST_PROTOCOL"://"$ES_HOST":"$ES_PORT"/"$1"/_recovery?pretty
+    else
+        curl "$ES_HOST_PROTOCOL"://"$ES_HOST":"$ES_PORT"/_recovery?pretty
+    fi
+}
+
+es_backup () {
+    echo "********* backing up indices : "$BACKUP_INDICES" *********"
+    repo_name=$(get_repo "$ES_BACKUP_REPOSITORY_NAME")
+    if [ $repo_name != '"error"' ]; then
+        health=$(get_cluster_health)
+        if [ "$health" != "red" ]; then
+            snapshot_name=$(get_snapshot_name)
+            create_snapshot "$snapshot_name"
+        else
+            echo "error: cluster health red"
+        fi
+    else
+        echo "error: error fetching the repo"
+    fi
+}
+
+es_restore () {
+    echo "********* restore indices : "$BACKUP_INDICES" *********"
+    repo_name=$(get_repo "$ES_BACKUP_REPOSITORY_NAME")
+    snapshot_name="$1"
+    if [ -z "$1"]; then
+        last_snapshot=$(last_snapshot_name)
+        snapshot_status=$(snapshot_status $last_snapshot)
+        if [ "$snapshot_status" == 'SUCCESS' ]; then
+            snapshot_name=$last_snapshot
+        else
+            echo "error: last snapshot failed. restore manually by checking list_snapshot"
+            return
+        fi
+    fi
+    if [ -n "$snapshot_name" ]; then
+        if [ $repo_name != '"error"' ]; then
+            close_index "fabric_search"
+            close_index "fabric_place_search"
+            restore_snapshot "$snapshot_name"
+        fi
+    else
+        echo "error: snapshot name not found"
+    fi
+}

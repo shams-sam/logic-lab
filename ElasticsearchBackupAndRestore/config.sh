@@ -20,7 +20,7 @@ export AWS_SECRET_KEY=""
 #                                                                      d"     YD
 #                                                                      "Y88888P'
 export AWS_BUCKET=""
-export AWS_REGION="us-east-1"
+export AWS_REGION=""
 
 # .ooooo.   .oooo.o    oooo d8b  .ooooo.  oo.ooooo.   .ooooo.
 # d88' `88b d88(  "8    `888""8P d88' `88b  888' `88b d88' `88b
@@ -30,9 +30,9 @@ export AWS_REGION="us-east-1"
 #                                           888
 #                                          o888o
 export S3_MAX_RETRIES="3"
-export S3_BASE_PATH="backup"
+export S3_BASE_PATH=""
 export BACKUP_INDICES=""
-export ES_BACKUP_REPOSITORY_NAME="s3_es_backup"
+export ES_BACKUP_REPOSITORY_NAME=""
 
 #                       oooo                               .
 #                       `888                             .o8
@@ -41,6 +41,6 @@ export ES_BACKUP_REPOSITORY_NAME="s3_es_backup"
 # 888ooo888 `"Y88b.      888   888  888   888 `"Y88b.    888
 # 888    .o o.  )88b     888   888  888   888 o.  )88b   888 .
 # `Y8bod8P' 8""888P'    o888o o888o `Y8bod8P' 8""888P'   "888"
-export ES_HOST="localhost"
-export ES_HOST_PROTOCOL="http"
-export ES_PORT="9200"
+export ES_HOST=""
+export ES_HOST_PROTOCOL=""
+export ES_PORT=""

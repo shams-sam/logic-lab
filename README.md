@@ -7,4 +7,5 @@ Just Code for Fun
 #### 3. [SQL](https://github.com/shams-sam/logic-lab/tree/master/SQL)
 #### 4. [Artificial Neural Networks](https://github.com/shams-sam/logic-lab/tree/master/ANN)
 #### 5. [Elasticsearch Backup and Restore](https://github.com/shams-sam/logic-lab/tree/master/ElasticsearchBackupAndRestore)
+#### 6. [AhoCorasick Algorithm for String Matching](https://github.com/shams-sam/logic-lab/tree/master/AhoCorasick)
 

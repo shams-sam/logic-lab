@@ -1,0 +1,11 @@
+virtualenv
+NumPy >= 1.7.1                      # scientific computing package
+SciPy >= 0.11                       # mathematics, science, and engineering package
+nose >= 1.3.0                       # unit testing package
+nose-parameterized >= 0.5.0         # parameterised testing package
+six                                 # dependency for theano
+theano                              # main package nueral network
+matplotlib                          # for plots and graphs
+Pillow                              # python image library
+matplotlib                          # matlab plot for python
+scikit-learn                        # scikit learn

@@ -9,4 +9,5 @@ Just Code for Fun
 #### 5. [Elasticsearch Backup and Restore](https://github.com/shams-sam/logic-lab/tree/master/ElasticsearchBackupAndRestore)
 #### 6. [AhoCorasick Algorithm for String Matching](https://github.com/shams-sam/logic-lab/tree/master/AhoCorasick)
 #### 7. [ANN For Fingerprint Training](https://github.com/shams-sam/logic-lab/tree/master/ANNForFingerprint)
+#### 8. [RNN For Binary Addition](https://github.com/shams-sam/logic-lab/tree/master/RNNForBinaryAddition)
 

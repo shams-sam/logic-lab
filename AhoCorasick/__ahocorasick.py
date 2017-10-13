@@ -1,6 +1,7 @@
 from collections import deque
 import _pickle as pkl
 from tqdm import tqdm
+import sys
 
 
 class AhoCorasick(object):
@@ -11,15 +12,20 @@ class AhoCorasick(object):
             "value": "",
             "next_states": [],
             "fail_state": 0,
-            "output": []
+            "output": [],
+            "payload": []
         })
         if len(keywords):
             self.add_keywords(keywords)
             self.set_fail_transitions()
 
     def add_keywords(self, keywords):
-        for keyword in tqdm(keywords):
-            self.add_keyword(keyword)
+        if not isinstance(keywords, dict):
+            for keyword in tqdm(keywords):
+                self.add_keyword(keyword)
+        else:
+            for keyword, payload in tqdm(keywords.items(), total=len(keywords)):
+                self.add_keyword(keyword, payload)
 
     def find_next_state(self, current_state, value):
         for node in self.adj_list[current_state]["next_states"]:
@@ -27,7 +33,7 @@ class AhoCorasick(object):
                 return node
         return None
 
-    def add_keyword(self, keyword):
+    def add_keyword(self, keyword, payload=None):
         current_state = 0
         j = 0
         keyword = " " + keyword.lower().strip() + " "
@@ -44,13 +50,16 @@ class AhoCorasick(object):
                 "value": keyword[i],
                 "next_states": [],
                 "fail_state": 0,
-                "output": []
+                "output": [],
+                "payload": []
             }
             self.adj_list.append(node)
             self.adj_list[current_state][
                 "next_states"].append(len(self.adj_list) - 1)
             current_state = len(self.adj_list) - 1
         self.adj_list[current_state]["output"].append(keyword)
+        if payload:
+            self.adj_list[current_state]["payload"].append(payload)
 
     def set_fail_transitions(self):
         q = deque()
@@ -58,7 +67,12 @@ class AhoCorasick(object):
         for node in self.adj_list[0]["next_states"]:
             q.append(node)
             self.adj_list[node]["fail_state"] = 0
+        counter = 0
         while q:
+            if counter % 100000 == 0:
+                counter = 1
+                print(len(q))
+            counter += 1
             r = q.popleft()
             for child in self.adj_list[r]["next_states"]:
                 q.append(child)
@@ -89,7 +103,8 @@ class AhoCorasick(object):
                     block = {
                         "index": i - len(j),
                         "length": len(j),
-                        "word": j
+                        "word": j,
+                        "payload": self.adj_list[current_state]["payload"]
                     }
                     found.append(block)
         if superset:

@@ -7,7 +7,7 @@ import re
 import collections
 
 
-class SpellChecker:
+class SpellCorrect:
 
     def __init__(self,
                  text=None,

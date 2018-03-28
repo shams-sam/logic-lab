@@ -3,7 +3,7 @@ from nltk.stem import SnowballStemmer
 from nltk.corpus import stopwords
 
 
-def _text_preprocessing(
+def text_preprocessing(
     text,
     remove_stopwords=False,
     stem_words=False,

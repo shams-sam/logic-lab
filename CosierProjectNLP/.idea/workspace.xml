@@ -1,0 +1,827 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="36f62581-c146-4599-b866-02a8bc1793b7" name="Default" comment="" />
+    <ignored path="CosierProjectNLP.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/CosierProjectNLP$DataLoader.coverage" NAME="DataLoader Coverage Results" MODIFIED="1482952842241" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="CosierProjectNLP" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="DataLoader.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/DataLoader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="332">
+              <caret line="23" column="249" lean-forward="false" selection-start-line="23" selection-start-column="249" selection-end-line="23" selection-end-column="249" />
+              <caret line="23" column="294" lean-forward="false" selection-start-line="23" selection-start-column="294" selection-end-line="23" selection-end-column="294" />
+              <caret line="23" column="343" lean-forward="false" selection-start-line="23" selection-start-column="343" selection-end-line="23" selection-end-column="343" />
+              <caret line="23" column="430" lean-forward="false" selection-start-line="23" selection-start-column="430" selection-end-line="23" selection-end-column="430" />
+              <caret line="23" column="482" lean-forward="false" selection-start-line="23" selection-start-column="482" selection-end-line="23" selection-end-column="482" />
+              <caret line="23" column="515" lean-forward="false" selection-start-line="23" selection-start-column="515" selection-end-line="23" selection-end-column="515" />
+              <caret line="23" column="536" lean-forward="false" selection-start-line="23" selection-start-column="536" selection-end-line="23" selection-end-column="536" />
+              <caret line="23" column="716" lean-forward="false" selection-start-line="23" selection-start-column="716" selection-end-line="23" selection-end-column="716" />
+              <caret line="23" column="784" lean-forward="false" selection-start-line="23" selection-start-column="784" selection-end-line="23" selection-end-column="784" />
+              <caret line="23" column="822" lean-forward="false" selection-start-line="23" selection-start-column="822" selection-end-line="23" selection-end-column="822" />
+              <caret line="23" column="883" lean-forward="false" selection-start-line="23" selection-start-column="883" selection-end-line="23" selection-end-column="883" />
+              <caret line="23" column="922" lean-forward="false" selection-start-line="23" selection-start-column="922" selection-end-line="23" selection-end-column="922" />
+              <caret line="23" column="973" lean-forward="false" selection-start-line="23" selection-start-column="973" selection-end-line="23" selection-end-column="973" />
+              <caret line="23" column="1015" lean-forward="false" selection-start-line="23" selection-start-column="1015" selection-end-line="23" selection-end-column="1015" />
+              <caret line="23" column="1145" lean-forward="false" selection-start-line="23" selection-start-column="1145" selection-end-line="23" selection-end-column="1145" />
+              <caret line="23" column="1271" lean-forward="false" selection-start-line="23" selection-start-column="1271" selection-end-line="23" selection-end-column="1271" />
+              <caret line="23" column="1310" lean-forward="false" selection-start-line="23" selection-start-column="1310" selection-end-line="23" selection-end-column="1310" />
+              <caret line="23" column="1347" lean-forward="false" selection-start-line="23" selection-start-column="1347" selection-end-line="23" selection-end-column="1347" />
+              <caret line="23" column="1379" lean-forward="false" selection-start-line="23" selection-start-column="1379" selection-end-line="23" selection-end-column="1379" />
+              <caret line="23" column="1428" lean-forward="false" selection-start-line="23" selection-start-column="1428" selection-end-line="23" selection-end-column="1428" />
+              <caret line="23" column="1499" lean-forward="false" selection-start-line="23" selection-start-column="1499" selection-end-line="23" selection-end-column="1499" />
+              <caret line="23" column="1525" lean-forward="false" selection-start-line="23" selection-start-column="1525" selection-end-line="23" selection-end-column="1525" />
+              <caret line="23" column="1543" lean-forward="false" selection-start-line="23" selection-start-column="1543" selection-end-line="23" selection-end-column="1543" />
+              <caret line="23" column="1559" lean-forward="false" selection-start-line="23" selection-start-column="1559" selection-end-line="23" selection-end-column="1559" />
+              <caret line="23" column="1576" lean-forward="false" selection-start-line="23" selection-start-column="1576" selection-end-line="23" selection-end-column="1576" />
+              <caret line="23" column="1588" lean-forward="false" selection-start-line="23" selection-start-column="1588" selection-end-line="23" selection-end-column="1588" />
+              <caret line="23" column="1613" lean-forward="false" selection-start-line="23" selection-start-column="1613" selection-end-line="23" selection-end-column="1613" />
+              <caret line="23" column="1634" lean-forward="false" selection-start-line="23" selection-start-column="1634" selection-end-line="23" selection-end-column="1634" />
+              <caret line="23" column="1667" lean-forward="false" selection-start-line="23" selection-start-column="1667" selection-end-line="23" selection-end-column="1667" />
+              <caret line="23" column="1705" lean-forward="false" selection-start-line="23" selection-start-column="1705" selection-end-line="23" selection-end-column="1705" />
+              <caret line="23" column="1785" lean-forward="false" selection-start-line="23" selection-start-column="1785" selection-end-line="23" selection-end-column="1785" />
+              <caret line="23" column="1852" lean-forward="false" selection-start-line="23" selection-start-column="1852" selection-end-line="23" selection-end-column="1852" />
+              <caret line="23" column="1903" lean-forward="false" selection-start-line="23" selection-start-column="1903" selection-end-line="23" selection-end-column="1903" />
+              <caret line="23" column="1936" lean-forward="false" selection-start-line="23" selection-start-column="1936" selection-end-line="23" selection-end-column="1936" />
+              <caret line="23" column="1999" lean-forward="false" selection-start-line="23" selection-start-column="1999" selection-end-line="23" selection-end-column="1999" />
+              <caret line="23" column="2070" lean-forward="false" selection-start-line="23" selection-start-column="2070" selection-end-line="23" selection-end-column="2070" />
+              <caret line="23" column="2092" lean-forward="false" selection-start-line="23" selection-start-column="2092" selection-end-line="23" selection-end-column="2092" />
+              <caret line="23" column="2109" lean-forward="false" selection-start-line="23" selection-start-column="2109" selection-end-line="23" selection-end-column="2109" />
+              <caret line="23" column="2131" lean-forward="false" selection-start-line="23" selection-start-column="2131" selection-end-line="23" selection-end-column="2131" />
+              <caret line="23" column="2151" lean-forward="false" selection-start-line="23" selection-start-column="2151" selection-end-line="23" selection-end-column="2151" />
+              <caret line="23" column="2169" lean-forward="false" selection-start-line="23" selection-start-column="2169" selection-end-line="23" selection-end-column="2169" />
+              <caret line="23" column="2199" lean-forward="false" selection-start-line="23" selection-start-column="2199" selection-end-line="23" selection-end-column="2199" />
+              <caret line="23" column="2249" lean-forward="false" selection-start-line="23" selection-start-column="2249" selection-end-line="23" selection-end-column="2249" />
+              <caret line="23" column="2334" lean-forward="false" selection-start-line="23" selection-start-column="2334" selection-end-line="23" selection-end-column="2334" />
+              <caret line="23" column="2351" lean-forward="false" selection-start-line="23" selection-start-column="2351" selection-end-line="23" selection-end-column="2351" />
+              <caret line="23" column="2367" lean-forward="false" selection-start-line="23" selection-start-column="2367" selection-end-line="23" selection-end-column="2367" />
+              <caret line="23" column="2383" lean-forward="false" selection-start-line="23" selection-start-column="2383" selection-end-line="23" selection-end-column="2383" />
+              <caret line="23" column="2403" lean-forward="false" selection-start-line="23" selection-start-column="2403" selection-end-line="23" selection-end-column="2403" />
+              <caret line="23" column="2435" lean-forward="false" selection-start-line="23" selection-start-column="2435" selection-end-line="23" selection-end-column="2435" />
+              <caret line="23" column="2485" lean-forward="false" selection-start-line="23" selection-start-column="2485" selection-end-line="23" selection-end-column="2485" />
+              <caret line="23" column="2543" lean-forward="false" selection-start-line="23" selection-start-column="2543" selection-end-line="23" selection-end-column="2543" />
+              <caret line="23" column="2744" lean-forward="false" selection-start-line="23" selection-start-column="2744" selection-end-line="23" selection-end-column="2744" />
+              <caret line="23" column="2774" lean-forward="false" selection-start-line="23" selection-start-column="2774" selection-end-line="23" selection-end-column="2774" />
+              <caret line="23" column="3275" lean-forward="false" selection-start-line="23" selection-start-column="3275" selection-end-line="23" selection-end-column="3275" />
+              <caret line="23" column="3291" lean-forward="false" selection-start-line="23" selection-start-column="3291" selection-end-line="23" selection-end-column="3291" />
+              <caret line="23" column="3309" lean-forward="false" selection-start-line="23" selection-start-column="3309" selection-end-line="23" selection-end-column="3309" />
+              <caret line="23" column="3350" lean-forward="false" selection-start-line="23" selection-start-column="3350" selection-end-line="23" selection-end-column="3350" />
+              <caret line="23" column="3380" lean-forward="false" selection-start-line="23" selection-start-column="3380" selection-end-line="23" selection-end-column="3380" />
+              <caret line="23" column="3443" lean-forward="false" selection-start-line="23" selection-start-column="3443" selection-end-line="23" selection-end-column="3443" />
+              <caret line="23" column="3502" lean-forward="false" selection-start-line="23" selection-start-column="3502" selection-end-line="23" selection-end-column="3502" />
+              <caret line="23" column="3591" lean-forward="false" selection-start-line="23" selection-start-column="3591" selection-end-line="23" selection-end-column="3591" />
+              <caret line="23" column="3774" lean-forward="false" selection-start-line="23" selection-start-column="3774" selection-end-line="23" selection-end-column="3774" />
+              <caret line="23" column="3812" lean-forward="false" selection-start-line="23" selection-start-column="3812" selection-end-line="23" selection-end-column="3812" />
+              <caret line="23" column="3887" lean-forward="false" selection-start-line="23" selection-start-column="3887" selection-end-line="23" selection-end-column="3887" />
+              <caret line="23" column="3937" lean-forward="false" selection-start-line="23" selection-start-column="3937" selection-end-line="23" selection-end-column="3937" />
+              <caret line="23" column="3987" lean-forward="false" selection-start-line="23" selection-start-column="3987" selection-end-line="23" selection-end-column="3987" />
+              <caret line="23" column="4027" lean-forward="false" selection-start-line="23" selection-start-column="4027" selection-end-line="23" selection-end-column="4027" />
+              <caret line="23" column="4880" lean-forward="false" selection-start-line="23" selection-start-column="4880" selection-end-line="23" selection-end-column="4880" />
+              <caret line="23" column="5022" lean-forward="false" selection-start-line="23" selection-start-column="5022" selection-end-line="23" selection-end-column="5022" />
+              <caret line="23" column="5063" lean-forward="false" selection-start-line="23" selection-start-column="5063" selection-end-line="23" selection-end-column="5063" />
+              <caret line="23" column="5114" lean-forward="false" selection-start-line="23" selection-start-column="5114" selection-end-line="23" selection-end-column="5114" />
+              <caret line="23" column="5607" lean-forward="false" selection-start-line="23" selection-start-column="5607" selection-end-line="23" selection-end-column="5607" />
+              <caret line="23" column="6553" lean-forward="false" selection-start-line="23" selection-start-column="6553" selection-end-line="23" selection-end-column="6553" />
+              <caret line="23" column="6861" lean-forward="false" selection-start-line="23" selection-start-column="6861" selection-end-line="23" selection-end-column="6861" />
+              <caret line="23" column="7336" lean-forward="false" selection-start-line="23" selection-start-column="7336" selection-end-line="23" selection-end-column="7336" />
+              <caret line="23" column="7372" lean-forward="false" selection-start-line="23" selection-start-column="7372" selection-end-line="23" selection-end-column="7372" />
+              <caret line="23" column="7462" lean-forward="false" selection-start-line="23" selection-start-column="7462" selection-end-line="23" selection-end-column="7462" />
+              <caret line="23" column="7708" lean-forward="false" selection-start-line="23" selection-start-column="7708" selection-end-line="23" selection-end-column="7708" />
+              <caret line="23" column="7731" lean-forward="false" selection-start-line="23" selection-start-column="7731" selection-end-line="23" selection-end-column="7731" />
+              <caret line="23" column="7748" lean-forward="false" selection-start-line="23" selection-start-column="7748" selection-end-line="23" selection-end-column="7748" />
+              <caret line="23" column="7767" lean-forward="false" selection-start-line="23" selection-start-column="7767" selection-end-line="23" selection-end-column="7767" />
+              <caret line="23" column="7785" lean-forward="false" selection-start-line="23" selection-start-column="7785" selection-end-line="23" selection-end-column="7785" />
+              <caret line="23" column="7818" lean-forward="false" selection-start-line="23" selection-start-column="7818" selection-end-line="23" selection-end-column="7818" />
+              <caret line="23" column="7835" lean-forward="false" selection-start-line="23" selection-start-column="7835" selection-end-line="23" selection-end-column="7835" />
+              <caret line="23" column="7861" lean-forward="false" selection-start-line="23" selection-start-column="7861" selection-end-line="23" selection-end-column="7861" />
+              <caret line="23" column="7882" lean-forward="false" selection-start-line="23" selection-start-column="7882" selection-end-line="23" selection-end-column="7882" />
+              <caret line="23" column="7899" lean-forward="false" selection-start-line="23" selection-start-column="7899" selection-end-line="23" selection-end-column="7899" />
+              <caret line="23" column="7948" lean-forward="false" selection-start-line="23" selection-start-column="7948" selection-end-line="23" selection-end-column="7948" />
+              <caret line="23" column="7979" lean-forward="false" selection-start-line="23" selection-start-column="7979" selection-end-line="23" selection-end-column="7979" />
+              <caret line="23" column="8060" lean-forward="false" selection-start-line="23" selection-start-column="8060" selection-end-line="23" selection-end-column="8060" />
+              <caret line="23" column="8110" lean-forward="false" selection-start-line="23" selection-start-column="8110" selection-end-line="23" selection-end-column="8110" />
+              <caret line="23" column="8414" lean-forward="false" selection-start-line="23" selection-start-column="8414" selection-end-line="23" selection-end-column="8414" />
+              <caret line="23" column="8476" lean-forward="false" selection-start-line="23" selection-start-column="8476" selection-end-line="23" selection-end-column="8476" />
+              <caret line="23" column="8523" lean-forward="false" selection-start-line="23" selection-start-column="8523" selection-end-line="23" selection-end-column="8523" />
+              <caret line="23" column="8542" lean-forward="false" selection-start-line="23" selection-start-column="8542" selection-end-line="23" selection-end-column="8542" />
+              <caret line="23" column="8562" lean-forward="false" selection-start-line="23" selection-start-column="8562" selection-end-line="23" selection-end-column="8562" />
+              <caret line="23" column="8582" lean-forward="false" selection-start-line="23" selection-start-column="8582" selection-end-line="23" selection-end-column="8582" />
+              <caret line="23" column="8617" lean-forward="false" selection-start-line="23" selection-start-column="8617" selection-end-line="23" selection-end-column="8617" />
+              <caret line="23" column="8681" lean-forward="false" selection-start-line="23" selection-start-column="8681" selection-end-line="23" selection-end-column="8681" />
+              <caret line="23" column="8737" lean-forward="false" selection-start-line="23" selection-start-column="8737" selection-end-line="23" selection-end-column="8737" />
+              <caret line="23" column="8785" lean-forward="false" selection-start-line="23" selection-start-column="8785" selection-end-line="23" selection-end-column="8785" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CosierProjectNLP.iml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CosierProjectNLP.iml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/resources/config.properties" />
+        <option value="$PROJECT_DIR$/src/ConfigLoader.java" />
+        <option value="$PROJECT_DIR$/src/DataLoader.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Spelling</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>SpellCheckingInspection</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CosierProjectNLP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CosierProjectNLP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CosierProjectNLP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CosierProjectNLP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CosierProjectNLP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="FullScreen" value="true" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.DataLoader">
+    <configuration default="false" name="DataLoader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="DataLoader" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="CosierProjectNLP" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="ConfigLoader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="ConfigLoader" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="CosierProjectNLP" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SCRATCH_FILE_ID" value="0" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="CosierProjectNLP" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Application.DataLoader" />
+      <item index="1" class="java.lang.String" itemvalue="Application.ConfigLoader" />
+    </list>
+    <recent_temporary>
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Application.DataLoader" />
+        <item index="1" class="java.lang.String" itemvalue="Application.ConfigLoader" />
+      </list>
+    </recent_temporary>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="GAPID_DISABLE_PCS" value="false" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method />
+    </configuration>
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="modificationStamps">
+      <map>
+        <entry key="$USER_HOME$/practo/cerebro" value="1475215132000" />
+        <entry key="$USER_HOME$/studies/FP Scala/funsets" value="1462300040000" />
+        <entry key="$USER_HOME$/studies/FP Scala/recfun" value="1462352930000" />
+        <entry key="$USER_HOME$/studies/example" value="1459500174000" />
+      </map>
+    </option>
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="36f62581-c146-4599-b866-02a8bc1793b7" name="Default" comment="" />
+      <created>1482858384945</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1482858384945</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32910156" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24513888" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32910156" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297619" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/DataLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CosierProjectNLP.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/config.properties" />
+    <entry file="file://$PROJECT_DIR$/src/ConfigLoader.java" />
+    <entry file="file://$PROJECT_DIR$/CosierProjectNLP.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="23" column="249" lean-forward="false" selection-start-line="23" selection-start-column="249" selection-end-line="23" selection-end-column="249" />
+          <caret line="23" column="294" lean-forward="false" selection-start-line="23" selection-start-column="294" selection-end-line="23" selection-end-column="294" />
+          <caret line="23" column="343" lean-forward="false" selection-start-line="23" selection-start-column="343" selection-end-line="23" selection-end-column="343" />
+          <caret line="23" column="430" lean-forward="false" selection-start-line="23" selection-start-column="430" selection-end-line="23" selection-end-column="430" />
+          <caret line="23" column="482" lean-forward="false" selection-start-line="23" selection-start-column="482" selection-end-line="23" selection-end-column="482" />
+          <caret line="23" column="515" lean-forward="false" selection-start-line="23" selection-start-column="515" selection-end-line="23" selection-end-column="515" />
+          <caret line="23" column="536" lean-forward="false" selection-start-line="23" selection-start-column="536" selection-end-line="23" selection-end-column="536" />
+          <caret line="23" column="716" lean-forward="false" selection-start-line="23" selection-start-column="716" selection-end-line="23" selection-end-column="716" />
+          <caret line="23" column="784" lean-forward="false" selection-start-line="23" selection-start-column="784" selection-end-line="23" selection-end-column="784" />
+          <caret line="23" column="822" lean-forward="false" selection-start-line="23" selection-start-column="822" selection-end-line="23" selection-end-column="822" />
+          <caret line="23" column="883" lean-forward="false" selection-start-line="23" selection-start-column="883" selection-end-line="23" selection-end-column="883" />
+          <caret line="23" column="922" lean-forward="false" selection-start-line="23" selection-start-column="922" selection-end-line="23" selection-end-column="922" />
+          <caret line="23" column="973" lean-forward="false" selection-start-line="23" selection-start-column="973" selection-end-line="23" selection-end-column="973" />
+          <caret line="23" column="1015" lean-forward="false" selection-start-line="23" selection-start-column="1015" selection-end-line="23" selection-end-column="1015" />
+          <caret line="23" column="1145" lean-forward="false" selection-start-line="23" selection-start-column="1145" selection-end-line="23" selection-end-column="1145" />
+          <caret line="23" column="1271" lean-forward="false" selection-start-line="23" selection-start-column="1271" selection-end-line="23" selection-end-column="1271" />
+          <caret line="23" column="1310" lean-forward="false" selection-start-line="23" selection-start-column="1310" selection-end-line="23" selection-end-column="1310" />
+          <caret line="23" column="1347" lean-forward="false" selection-start-line="23" selection-start-column="1347" selection-end-line="23" selection-end-column="1347" />
+          <caret line="23" column="1379" lean-forward="false" selection-start-line="23" selection-start-column="1379" selection-end-line="23" selection-end-column="1379" />
+          <caret line="23" column="1428" lean-forward="false" selection-start-line="23" selection-start-column="1428" selection-end-line="23" selection-end-column="1428" />
+          <caret line="23" column="1499" lean-forward="false" selection-start-line="23" selection-start-column="1499" selection-end-line="23" selection-end-column="1499" />
+          <caret line="23" column="1525" lean-forward="false" selection-start-line="23" selection-start-column="1525" selection-end-line="23" selection-end-column="1525" />
+          <caret line="23" column="1543" lean-forward="false" selection-start-line="23" selection-start-column="1543" selection-end-line="23" selection-end-column="1543" />
+          <caret line="23" column="1559" lean-forward="false" selection-start-line="23" selection-start-column="1559" selection-end-line="23" selection-end-column="1559" />
+          <caret line="23" column="1576" lean-forward="false" selection-start-line="23" selection-start-column="1576" selection-end-line="23" selection-end-column="1576" />
+          <caret line="23" column="1588" lean-forward="false" selection-start-line="23" selection-start-column="1588" selection-end-line="23" selection-end-column="1588" />
+          <caret line="23" column="1613" lean-forward="false" selection-start-line="23" selection-start-column="1613" selection-end-line="23" selection-end-column="1613" />
+          <caret line="23" column="1634" lean-forward="false" selection-start-line="23" selection-start-column="1634" selection-end-line="23" selection-end-column="1634" />
+          <caret line="23" column="1667" lean-forward="false" selection-start-line="23" selection-start-column="1667" selection-end-line="23" selection-end-column="1667" />
+          <caret line="23" column="1705" lean-forward="false" selection-start-line="23" selection-start-column="1705" selection-end-line="23" selection-end-column="1705" />
+          <caret line="23" column="1785" lean-forward="false" selection-start-line="23" selection-start-column="1785" selection-end-line="23" selection-end-column="1785" />
+          <caret line="23" column="1852" lean-forward="false" selection-start-line="23" selection-start-column="1852" selection-end-line="23" selection-end-column="1852" />
+          <caret line="23" column="1903" lean-forward="false" selection-start-line="23" selection-start-column="1903" selection-end-line="23" selection-end-column="1903" />
+          <caret line="23" column="1936" lean-forward="false" selection-start-line="23" selection-start-column="1936" selection-end-line="23" selection-end-column="1936" />
+          <caret line="23" column="1999" lean-forward="false" selection-start-line="23" selection-start-column="1999" selection-end-line="23" selection-end-column="1999" />
+          <caret line="23" column="2070" lean-forward="false" selection-start-line="23" selection-start-column="2070" selection-end-line="23" selection-end-column="2070" />
+          <caret line="23" column="2092" lean-forward="false" selection-start-line="23" selection-start-column="2092" selection-end-line="23" selection-end-column="2092" />
+          <caret line="23" column="2109" lean-forward="false" selection-start-line="23" selection-start-column="2109" selection-end-line="23" selection-end-column="2109" />
+          <caret line="23" column="2131" lean-forward="false" selection-start-line="23" selection-start-column="2131" selection-end-line="23" selection-end-column="2131" />
+          <caret line="23" column="2151" lean-forward="false" selection-start-line="23" selection-start-column="2151" selection-end-line="23" selection-end-column="2151" />
+          <caret line="23" column="2169" lean-forward="false" selection-start-line="23" selection-start-column="2169" selection-end-line="23" selection-end-column="2169" />
+          <caret line="23" column="2199" lean-forward="false" selection-start-line="23" selection-start-column="2199" selection-end-line="23" selection-end-column="2199" />
+          <caret line="23" column="2249" lean-forward="false" selection-start-line="23" selection-start-column="2249" selection-end-line="23" selection-end-column="2249" />
+          <caret line="23" column="2334" lean-forward="false" selection-start-line="23" selection-start-column="2334" selection-end-line="23" selection-end-column="2334" />
+          <caret line="23" column="2351" lean-forward="false" selection-start-line="23" selection-start-column="2351" selection-end-line="23" selection-end-column="2351" />
+          <caret line="23" column="2367" lean-forward="false" selection-start-line="23" selection-start-column="2367" selection-end-line="23" selection-end-column="2367" />
+          <caret line="23" column="2383" lean-forward="false" selection-start-line="23" selection-start-column="2383" selection-end-line="23" selection-end-column="2383" />
+          <caret line="23" column="2403" lean-forward="false" selection-start-line="23" selection-start-column="2403" selection-end-line="23" selection-end-column="2403" />
+          <caret line="23" column="2435" lean-forward="false" selection-start-line="23" selection-start-column="2435" selection-end-line="23" selection-end-column="2435" />
+          <caret line="23" column="2485" lean-forward="false" selection-start-line="23" selection-start-column="2485" selection-end-line="23" selection-end-column="2485" />
+          <caret line="23" column="2543" lean-forward="false" selection-start-line="23" selection-start-column="2543" selection-end-line="23" selection-end-column="2543" />
+          <caret line="23" column="2744" lean-forward="false" selection-start-line="23" selection-start-column="2744" selection-end-line="23" selection-end-column="2744" />
+          <caret line="23" column="2774" lean-forward="false" selection-start-line="23" selection-start-column="2774" selection-end-line="23" selection-end-column="2774" />
+          <caret line="23" column="3275" lean-forward="false" selection-start-line="23" selection-start-column="3275" selection-end-line="23" selection-end-column="3275" />
+          <caret line="23" column="3291" lean-forward="false" selection-start-line="23" selection-start-column="3291" selection-end-line="23" selection-end-column="3291" />
+          <caret line="23" column="3309" lean-forward="false" selection-start-line="23" selection-start-column="3309" selection-end-line="23" selection-end-column="3309" />
+          <caret line="23" column="3350" lean-forward="false" selection-start-line="23" selection-start-column="3350" selection-end-line="23" selection-end-column="3350" />
+          <caret line="23" column="3380" lean-forward="false" selection-start-line="23" selection-start-column="3380" selection-end-line="23" selection-end-column="3380" />
+          <caret line="23" column="3443" lean-forward="false" selection-start-line="23" selection-start-column="3443" selection-end-line="23" selection-end-column="3443" />
+          <caret line="23" column="3502" lean-forward="false" selection-start-line="23" selection-start-column="3502" selection-end-line="23" selection-end-column="3502" />
+          <caret line="23" column="3591" lean-forward="false" selection-start-line="23" selection-start-column="3591" selection-end-line="23" selection-end-column="3591" />
+          <caret line="23" column="3774" lean-forward="false" selection-start-line="23" selection-start-column="3774" selection-end-line="23" selection-end-column="3774" />
+          <caret line="23" column="3812" lean-forward="false" selection-start-line="23" selection-start-column="3812" selection-end-line="23" selection-end-column="3812" />
+          <caret line="23" column="3887" lean-forward="false" selection-start-line="23" selection-start-column="3887" selection-end-line="23" selection-end-column="3887" />
+          <caret line="23" column="3937" lean-forward="false" selection-start-line="23" selection-start-column="3937" selection-end-line="23" selection-end-column="3937" />
+          <caret line="23" column="3987" lean-forward="false" selection-start-line="23" selection-start-column="3987" selection-end-line="23" selection-end-column="3987" />
+          <caret line="23" column="4027" lean-forward="false" selection-start-line="23" selection-start-column="4027" selection-end-line="23" selection-end-column="4027" />
+          <caret line="23" column="4880" lean-forward="false" selection-start-line="23" selection-start-column="4880" selection-end-line="23" selection-end-column="4880" />
+          <caret line="23" column="5022" lean-forward="false" selection-start-line="23" selection-start-column="5022" selection-end-line="23" selection-end-column="5022" />
+          <caret line="23" column="5063" lean-forward="false" selection-start-line="23" selection-start-column="5063" selection-end-line="23" selection-end-column="5063" />
+          <caret line="23" column="5114" lean-forward="false" selection-start-line="23" selection-start-column="5114" selection-end-line="23" selection-end-column="5114" />
+          <caret line="23" column="5607" lean-forward="false" selection-start-line="23" selection-start-column="5607" selection-end-line="23" selection-end-column="5607" />
+          <caret line="23" column="6553" lean-forward="false" selection-start-line="23" selection-start-column="6553" selection-end-line="23" selection-end-column="6553" />
+          <caret line="23" column="6861" lean-forward="false" selection-start-line="23" selection-start-column="6861" selection-end-line="23" selection-end-column="6861" />
+          <caret line="23" column="7336" lean-forward="false" selection-start-line="23" selection-start-column="7336" selection-end-line="23" selection-end-column="7336" />
+          <caret line="23" column="7372" lean-forward="false" selection-start-line="23" selection-start-column="7372" selection-end-line="23" selection-end-column="7372" />
+          <caret line="23" column="7462" lean-forward="false" selection-start-line="23" selection-start-column="7462" selection-end-line="23" selection-end-column="7462" />
+          <caret line="23" column="7708" lean-forward="false" selection-start-line="23" selection-start-column="7708" selection-end-line="23" selection-end-column="7708" />
+          <caret line="23" column="7731" lean-forward="false" selection-start-line="23" selection-start-column="7731" selection-end-line="23" selection-end-column="7731" />
+          <caret line="23" column="7748" lean-forward="false" selection-start-line="23" selection-start-column="7748" selection-end-line="23" selection-end-column="7748" />
+          <caret line="23" column="7767" lean-forward="false" selection-start-line="23" selection-start-column="7767" selection-end-line="23" selection-end-column="7767" />
+          <caret line="23" column="7785" lean-forward="false" selection-start-line="23" selection-start-column="7785" selection-end-line="23" selection-end-column="7785" />
+          <caret line="23" column="7818" lean-forward="false" selection-start-line="23" selection-start-column="7818" selection-end-line="23" selection-end-column="7818" />
+          <caret line="23" column="7835" lean-forward="false" selection-start-line="23" selection-start-column="7835" selection-end-line="23" selection-end-column="7835" />
+          <caret line="23" column="7861" lean-forward="false" selection-start-line="23" selection-start-column="7861" selection-end-line="23" selection-end-column="7861" />
+          <caret line="23" column="7882" lean-forward="false" selection-start-line="23" selection-start-column="7882" selection-end-line="23" selection-end-column="7882" />
+          <caret line="23" column="7899" lean-forward="false" selection-start-line="23" selection-start-column="7899" selection-end-line="23" selection-end-column="7899" />
+          <caret line="23" column="7948" lean-forward="false" selection-start-line="23" selection-start-column="7948" selection-end-line="23" selection-end-column="7948" />
+          <caret line="23" column="7979" lean-forward="false" selection-start-line="23" selection-start-column="7979" selection-end-line="23" selection-end-column="7979" />
+          <caret line="23" column="8060" lean-forward="false" selection-start-line="23" selection-start-column="8060" selection-end-line="23" selection-end-column="8060" />
+          <caret line="23" column="8110" lean-forward="false" selection-start-line="23" selection-start-column="8110" selection-end-line="23" selection-end-column="8110" />
+          <caret line="23" column="8414" lean-forward="false" selection-start-line="23" selection-start-column="8414" selection-end-line="23" selection-end-column="8414" />
+          <caret line="23" column="8476" lean-forward="false" selection-start-line="23" selection-start-column="8476" selection-end-line="23" selection-end-column="8476" />
+          <caret line="23" column="8523" lean-forward="false" selection-start-line="23" selection-start-column="8523" selection-end-line="23" selection-end-column="8523" />
+          <caret line="23" column="8542" lean-forward="false" selection-start-line="23" selection-start-column="8542" selection-end-line="23" selection-end-column="8542" />
+          <caret line="23" column="8562" lean-forward="false" selection-start-line="23" selection-start-column="8562" selection-end-line="23" selection-end-column="8562" />
+          <caret line="23" column="8582" lean-forward="false" selection-start-line="23" selection-start-column="8582" selection-end-line="23" selection-end-column="8582" />
+          <caret line="23" column="8617" lean-forward="false" selection-start-line="23" selection-start-column="8617" selection-end-line="23" selection-end-column="8617" />
+          <caret line="23" column="8681" lean-forward="false" selection-start-line="23" selection-start-column="8681" selection-end-line="23" selection-end-column="8681" />
+          <caret line="23" column="8737" lean-forward="false" selection-start-line="23" selection-start-column="8737" selection-end-line="23" selection-end-column="8737" />
+          <caret line="23" column="8785" lean-forward="false" selection-start-line="23" selection-start-column="8785" selection-end-line="23" selection-end-column="8785" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>scala-sdk-2.11.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>CosierProjectNLP</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
